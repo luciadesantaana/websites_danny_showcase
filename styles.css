@@ -1,6 +1,7 @@
 :root {
   --bg: #0c0f1a;
   --panel: #111628;
+  --panel-secondary: rgba(17, 22, 40, 0.8);
   --accent: #7cf3c3;
   --accent-2: #6ea8ff;
   --text: #e8edff;
@@ -147,6 +148,17 @@ a {
   font-size: 18px;
 }
 
+.stat-bar {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+}
+
 .hero-card {
   background: linear-gradient(145deg, rgba(17, 22, 40, 0.9), rgba(17, 22, 40, 0.7));
   border: 1px solid var(--border);
@@ -163,6 +175,19 @@ a {
   padding-left: 18px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.founder-note {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.founder-name {
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .badge {
@@ -197,6 +222,10 @@ a {
   background: var(--panel);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+}
+
+.panel-secondary {
+  background: var(--panel-secondary);
 }
 
 .section-head {
@@ -356,6 +385,18 @@ a {
   width: fit-content;
 }
 
+.testimonial {
+  background: linear-gradient(120deg, rgba(124, 243, 195, 0.12), rgba(110, 168, 255, 0.12));
+  display: grid;
+  gap: 12px;
+}
+
+.testimonial-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .cta {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -405,6 +446,17 @@ a {
   color: var(--muted);
 }
 
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.checkbox input {
+  margin-top: 4px;
+}
+
 input,
 textarea {
   width: 100%;
@@ -450,6 +502,11 @@ textarea {
 
 .button.full {
   width: 100%;
+}
+
+.tiny {
+  font-size: 12px;
+  margin: 0;
 }
 
 .footer {
@@ -507,5 +564,9 @@ textarea {
 
   .contact-meta {
     flex-direction: column;
+  }
+
+  .stat-bar {
+    grid-template-columns: 1fr;
   }
 }
